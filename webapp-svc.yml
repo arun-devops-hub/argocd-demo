@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: maven-webapp-svc
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80          # Port exposed within the cluster
     targetPort: 80  # Port on the pods
