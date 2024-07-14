@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: maven-web-app
+        app: maven-webapp
     spec:
       containers:
       - name: my-cont
