@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+  labels:
+    app: maven-webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: maven-webapp
+  template:
+    metadata:
+      labels:
+        app: maven-web-app
+    spec:
+      containers:
+      - name: my-cont
+        image: arunhub2/maven-web-app
+        ports:
+        - containerPort: 80
